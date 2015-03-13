@@ -1,0 +1,83 @@
+body {
+  background: url("/assets/images/blade-of-grass.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter:blur(20px);
+}
+.title {
+  margin: 0 auto;
+  width: 450px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 100px;
+  color: #fff;
+}
+.content {
+  height: 430px;
+  width: 800px;
+  margin: 0 auto;
+}
+social-ul {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.social-li {
+  display: inline-block;
+  margin: 0 auto;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+.social-li img {
+  width: 60px;
+  height: auto;
+}
+.footer-container {
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+}
+.social-icon img {
+  width: 50px;
+  height: auto;
+}
+.reg-form {
+  margin: 0 auto;
+  width: 400px;
+}
+.reg-form input {
+  width: 100%;
+  text-align: center;
+  height: 40px;
+}
+.reg-button {
+  margin: 0 auto;
+  width: 400px;
+}
+.reg-button button {
+  width: 100%;
+}
+.landing-elevator {
+  color: white;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 50px;
+  margin: 0 auto;
+  width: 500px;
+}
+.land-buttons button {
+  text-align: left;
+  color: white;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  width: 225px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+
+  outline: none;
+
+}
