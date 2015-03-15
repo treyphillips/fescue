@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function initialize(/* container, application */) {
+export function initialize(/*container, application*/) {
   Ember.$.ajaxSetup ({
      headers: {
        "X-Parse-Application-Id": 'jK17LLCxH4HGy3CpsQbFD23nPzJLRbPuU2GgGqL0',
