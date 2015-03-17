@@ -1,12 +1,21 @@
-{{outlet}}
+ {{outlet}}
 
+<form {{action 'authenticate' on="submit"}}>
+  <fieldset>
 
-<div class="login-form">
-  <input type="text" name="email" value="" placeholder="Email Address" required>
-  <input type="password" name="pass" value="" placeholder="Choose Password" required>
-  <button>Login</button>
-</div>
+    <div class="login-form">
+      <input type="text" name="email" value="" placeholder="Email Address" required>
+      <input type="password" name="pass" value="" placeholder="Choose Password" required>
+      <button>Login</button>
+    </div>
 
+  </fieldset>
+</form>
+<!--
+<ul>
 {{#each user in model}}
-<p>{{user.phoneNum}}</p>
-{{/each}}
+
+    <li class="goal">{{user.firstName}}</li>
+  {{/each}}
+
+</ul> -->

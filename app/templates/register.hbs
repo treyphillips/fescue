@@ -1,16 +1,31 @@
 {{outlet}}
 
-<div class="reg-form">
-  <input type="text" name="email" value="" placeholder="Email Address" required>
-  <input type="password" name="pass" value="" placeholder="Choose Password" required>
-  <input type="text" name="firstName" value="" placeholder="First Name" required>
-  <input type="text" name="lastName" value="" placeholder="Last Name" required>
-  <input type="text" name="address" value="" placeholder="Address" required>
-  <input type="text" name="city" value="" placeholder="City" required>
-  <input type="text" name="zipCode" value="" placeholder="Zip Code" required>
-  <input type="text" name="phone" value="" placeholder="Phone Number" required>
-</div>
 
-<div class="reg-button">
-<button>Submit</button>
-</div>
+<form {{action 'newUser' on="submit"}}>
+  <fieldset>
+
+    <div class="reg-form">
+
+      <span class="user-type">
+      <select>
+        <option value="Customer">Customer</option>
+        <option value="Contractor">Contractor</option>
+      </select>
+    </span>
+
+      <input type="text" name="email" value="" placeholder="Email Address" required>
+      <input type="password" name="pass" value="" placeholder="Choose Password" required>
+      <input type="text" name="firstName" value="" placeholder="First Name" required>
+      <input type="text" name="lastName" value="" placeholder="Last Name" required>
+      <input type="text" name="address" value="" placeholder="Address" required>
+      <input type="text" name="city" value="" placeholder="City" required>
+      <input type="text" name="zipCode" value="" placeholder="Zip Code" required>
+      <input type="text" name="phone" value="" placeholder="Phone Number" required>
+    </div>
+
+    <div class="reg-button">
+      <button>Submit</button>
+    </div>
+
+  </fieldset>
+</form>

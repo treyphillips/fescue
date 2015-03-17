@@ -11,11 +11,11 @@ export default Base.extend({
   },
 
   authenticate: function(credentials) {
-     var token = credentials.sessionToken;
-     if(token){ this.set('sessionToken', token); }
-     var endpoint = token ? 'users/me' : 'login';
-     var options = token ? {} : {
-       data: {
+    var token = credentials.sessionToken;
+    if(token){ this.set('sessionToken', token); }
+    var endpoint = token ? 'users/me' : 'login';
+    var options = token ? {} : {
+      data: {
         username: credentials.identification,
         password: credentials.password
       }
