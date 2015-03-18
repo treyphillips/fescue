@@ -44,9 +44,9 @@ export default Ember.Object.extend({
 
   save: function(type, record) {
     var adapter = this.container.lookup('adapter:' + type);
-    var serialized = record.toJSON();
+    // var serialized = record.toJSON();
 
-    return adapter.save(type, serialized).then(function(recordData) {
+    return adapter.save(type, record).then(function(recordData) {
       var record = this.createRecord(type, recordData);
       identityMap.set(type, record.id, record);
       return identityMap.get(type, record.id);

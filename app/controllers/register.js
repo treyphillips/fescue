@@ -1,10 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  model: function() {
+    return{};
+  },
+
   actions: {
-    saveBookmark: function(){
-      this.store.save('user', this.get('model'));
-      this.transitionTo('show', this.get('model'));
+    save: function() {
+      var self = this;
+      this.store.save('register', this.modelFor('new')).then(function(){
+        self.transitionTo('options');
+      });
     }
   }
 });

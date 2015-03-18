@@ -59,18 +59,48 @@
 //   }
 // });
 
+//
+// import ajax from 'ic-ajax';
+// import Ember from 'ember';
+//
+// export default Ember.Object.extend({
+//   find: function(name, id){
+//     /* jshint unused: false */
+//     return ajax("https://api.parse.com/1/user/" + id).then(function(user){
+//       user.id = user.objectId;
+//       delete user.objectId;
+//       delete user.sessionToken;
+//       return user;
+//     });
+//   }
+// });
+
 
 import ajax from 'ic-ajax';
 import Ember from 'ember';
 
+// TODO: reverse id -> objectId for POST/PUT
+
 export default Ember.Object.extend({
   find: function(name, id){
     /* jshint unused: false */
-    return ajax("https://api.parse.com/1/user/" + id).then(function(user){
+    console.log('adapter.find');
+    return ajax("https://api.parse.com/1/classes/user/" + id).then(function(user){
       user.id = user.objectId;
       delete user.objectId;
-      delete user.sessionToken;
       return user;
+    });
+  },
+
+  findAll: function(name) {
+    /* jshint unused: false */
+    console.log('adapter.findAll');
+    return ajax("https://api.parse.com/1/classes/user").then(function(response){
+      return response.results.map(function(user) {
+        user.id = user.objectId;
+        delete user.objectId;
+        return user;
+      });
     });
   }
 });

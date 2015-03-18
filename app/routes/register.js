@@ -1,18 +1,27 @@
 import Ember from 'ember';
+import ajax from 'ic-ajax';
+
 
 export default Ember.Route.extend({
- actions: {
-   createUser: function(newfirstName, newLastName, newEmail, newAddress, newCity, newState, newZipCode, newPhoneNum) {
+  model: function() {
+    return {};
+  },
 
-     var data = {firstName: newfirstName, lastName: newLastName, email: newEmail, address: newAddress, city: newCity, state: newState, zipCode: newZipCode, phone: newPhoneNum};
+actions: {
+  createToken: function(user) {
+    var data = {
+      name: user.name,
+      pledge: Number(user.pledge)
+};
+  var self = this;
+  ajax("https://api.parse.com/1/classes/user/", {
+    type: "POST",
+    data: JSON.stringify(data)
+  }).then(function(response){
+        console.log("Success", response);
+        self.transitionTo('options');
+  });
 
-     Ember.$.ajax("https://api.parse.com/1/classes/user/", {
-       type: "POST",
-       data: JSON.stringify(data)
-     }).done(function() {
-       console.log(data);
-     });
-
-   }
- }
+}
+}
 });

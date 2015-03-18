@@ -1,30 +1,30 @@
 {{outlet}}
 
 
-<form {{action 'newUser' on="submit"}}>
+<form {{action 'save' on="submit"}}>
   <fieldset>
 
     <div class="reg-form">
 
       <span class="user-type">
-      <select>
-        <option value="Customer">Customer</option>
-        <option value="Contractor">Contractor</option>
-      </select>
-    </span>
+        <select>
+          <option value="Customer">Customer</option>
+          <option value="Contractor">Contractor</option>
+        </select>
+      </span>
 
-      <input type="text" name="email" value="" placeholder="Email Address" required>
-      <input type="password" name="pass" value="" placeholder="Choose Password" required>
-      <input type="text" name="firstName" value="" placeholder="First Name" required>
-      <input type="text" name="lastName" value="" placeholder="Last Name" required>
-      <input type="text" name="address" value="" placeholder="Address" required>
-      <input type="text" name="city" value="" placeholder="City" required>
-      <input type="text" name="zipCode" value="" placeholder="Zip Code" required>
-      <input type="text" name="phone" value="" placeholder="Phone Number" required>
+      <input type="text" name="email" value="" placeholder="Email Address" value model.email required>
+      <input type="password" name="password" value="" placeholder="Choose Password" value model.password required>
+      <input type="text" name="firstName" value="" placeholder="First Name" value model.firstName required>
+      <input type="text" name="lastName" value="" placeholder="Last Name" value model.lastName required>
+      <input type="text" name="address" value="" placeholder="Address" value model.address required>
+      <input type="text" name="city" value="" placeholder="City" value model.city required>
+      <input type="text" name="zipCode" value="" placeholder="Zip Code" value model.zipCode required>
+      <input type="text" name="phone" value="" placeholder="Phone Number" value model.phone required>
     </div>
 
     <div class="reg-button">
-      <button>Submit</button>
+      <button class="reg-button" {{action "save"}}>Submit</button>
     </div>
 
   </fieldset>
