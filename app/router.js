@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('login');
   this.route('options');
   this.route('landing', { path: '/'});
+  this.route('completed');
 });
 
 export default Router;

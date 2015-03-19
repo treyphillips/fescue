@@ -1,14 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  model: function() {
-    return{};
-  },
 
   actions: {
     save: function() {
       var self = this;
-      this.store.save('register', this.modelFor('new')).then(function(){
+      var user = this.get('model');
+      user.username = user.email;
+      this.store.save('register', user).then(function() {
         self.transitionTo('options');
       });
     }

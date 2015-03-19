@@ -11,7 +11,7 @@ actions: {
   createToken: function(user) {
     var data = {
       name: user.name,
-      pledge: Number(user.pledge)
+      pledge: Number(user.pledge),
 };
   var self = this;
   ajax("https://api.parse.com/1/classes/user/", {
@@ -19,7 +19,7 @@ actions: {
     data: JSON.stringify(data)
   }).then(function(response){
         console.log("Success", response);
-        self.transitionTo('options');
+        self.transitionToRoute('options');
   });
 
 }
