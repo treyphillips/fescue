@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "fescue"
+        }, 
+        "fescue": {
+            "applicationId": "jK17LLCxH4HGy3CpsQbFD23nPzJLRbPuU2GgGqL0", 
+            "masterKey": "cMNz1apRcUudD1faFlz2v8UNyoUMWbNY7PeRMnK9"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}
