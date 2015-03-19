@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Object.extend({
   destroy: function(){
-    this.store.destroy('user', this);
+    this.store.destroy('User', this);
   },
 
   save: function(){
-    this.store.save('user', this);
+    this.store.save('User', this);
   },
 
   toJSON: function(){

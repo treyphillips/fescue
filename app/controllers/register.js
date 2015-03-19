@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
       var user = this.get('model');
       user.username = user.email;
       this.store.save('register', user).then(function() {
-        self.transitionTo('options');
+        self.get('session').authenticate('authenticator:parse-email', user);
       });
     }
   }

@@ -4,7 +4,11 @@
 {{outlet}}
 
 
-
+{{#if session.isAuthenticated}}
+  <a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+  <a {{ action 'authenticateSession' }}>Login</a>
+{{/if}}
 <!-- <div class="footer">
 
   <div class="footer-container">

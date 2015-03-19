@@ -16,7 +16,7 @@ export default Ember.Object.extend({
   },
 
   addFavorite: function(bookmark) {
-    return ajax("https://api.parse.com/1/user/" + this.id, {
+    return ajax("https://api.parse.com/1/users/" + this.id, {
       type: "PUT",
       data: JSON.stringify({
         favorites: {
