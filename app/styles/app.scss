@@ -3,13 +3,13 @@
 
 
 body {
-  background: url("/assets/images/blade-of-grass.jpg") no-repeat center center fixed;
+  background: url("/assets/images/sheep.jpeg") no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
 /*   filter:blur(20px);*/
-  text-shadow: 1px 1px black;
+  text-shadow: 2px 2px black;
  }
 
 .title {
@@ -59,7 +59,9 @@ social-ul {
   height: auto;
 }
 
-
+.logged-in a{
+  color: white;
+}
 //////////Registration Page//////////
 
 .reg-form {
@@ -99,7 +101,7 @@ social-ul {
   font-size: 50px;
 }
 
-.land-buttons {
+.land-buttons a{
   text-decoration: none;
   color: white;
   border: 2px;
@@ -134,9 +136,9 @@ social-ul {
 
 //////////Completed Page//////////
 .completed {
-margin: 0 auto;
-width: 500px;
-text-align: center;
-color: white;
-font-size: 50px;
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
 }

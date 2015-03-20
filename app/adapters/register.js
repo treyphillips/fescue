@@ -4,6 +4,7 @@ import Ember from 'ember';
 export default Ember.Object.extend({
 
       save: function(type, record) {
+        console.log(record);
         if (record.id) {
           return ajax({
             url: "https://api.parse.com/1/users" + record.id,

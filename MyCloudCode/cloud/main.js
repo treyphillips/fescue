@@ -21,7 +21,7 @@ function sendTemplate(templateName, params) {
       }
     ],
     message: {
-      from_email: "grass.app@gmail.com",
+      from_email: "grassy.app@gmail.com",
       to: [{
         email: params.toEmail,
         name: params.firstName + " " + params.lastName
@@ -42,8 +42,8 @@ function sendTemplate(templateName, params) {
 }
 
 Parse.Cloud.define('appointment', function(request, response) {
-  sendTemplate('mandrill-app-test-2', {
-    subject: 'YO',
+  sendTemplate('customer-job-scheduled', {
+    subject: 'A contractor with Grass is on their way!',
     firstName: "Trey",
     lastName: "Phillips",
     toEmail: "tlphillipsjr@gmail.com"

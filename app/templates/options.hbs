@@ -1,11 +1,18 @@
 {{outlet}}
 
+<form {{action 'save' on="submit"}}>
+  <fieldset>
+
 <div class="options-form">
-<input type="text" name="Acreage" value="" placeholder="How many acres do you have?" required>
 
-<input type="text" name="Shrubbery" value="" placeholder="Do you have shrubs that need trimming?" required>
+  {{input type="text" name="acreage" placeholder="How many acres do you have?" value=session.currentUser.acreage required=true}}
 
-<input type="text" name="Leaves" value="" placeholder="Do you have leaves or other brush that requires hauling off?" required>
+  {{input type="text" name="shrub" placeholder="Do you have shrubs that need trimming?" value=session.currentUser.shrub required=true}}
+
+  {{input type="text" name="brush" placeholder="Do you have leaves or other brush that requires hauling off?" value=session.currentUser.brush required=true}}
 
 <button>Submit</button>
 </div>
+
+</fieldset>
+</form>

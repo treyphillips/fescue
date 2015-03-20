@@ -28,7 +28,7 @@ export default Base.extend({
     };
 
     return ajax('https://api.parse.com/1/' + endpoint, options).then(function(response) {
-      this.set('sessionToken', response.sessionToken);
+      this.set('sessionToken', response.sessionToken); 
       return {sessionToken: response.sessionToken};
     }.bind(this));
   },

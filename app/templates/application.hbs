@@ -1,14 +1,20 @@
-<div class="header">
-  <h1 class="title">Grass</h1>
-</div>
-{{outlet}}
-
-
+<div class="logged-in">
 {{#if session.isAuthenticated}}
   <a {{ action 'invalidateSession' }}>Logout</a>
 {{else}}
   <a {{ action 'authenticateSession' }}>Login</a>
 {{/if}}
+</div>
+
+<div class="header">
+  <h1 class="title">Grass</h1>
+</div>
+
+
+
+{{outlet}}
+
+
 <!-- <div class="footer">
 
   <div class="footer-container">

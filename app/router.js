@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('options');
   this.route('landing', { path: '/'});
   this.route('completed');
+  this.route('profile');
 });
 
 export default Router;

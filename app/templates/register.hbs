@@ -6,13 +6,7 @@
 
     <div class="reg-form">
 
-      <span class="user-type">
-        <select>
-          <option value="Customer">Customer</option>
-          <option value="Contractor">Contractor</option>
-        </select>
-      </span>
-
+      {{input type="text" name="custOrcont" placeholder="Are you a customer or contractor" required=true}}
       {{input type="text" name="email" placeholder="Email Address" value=model.email required=true}}
       {{input type="password" name="password" placeholder="Choose Password" value=model.password required=true}}
       {{input type="text" name="firstName" placeholder="First Name" value=model.firstName required=true}}
