@@ -6,9 +6,6 @@ export default Ember.Controller.extend({
 
   actions: {
     save: function() {
-      console.log(this.session.currentUser);
-
-      this.store.save('register', this.session.currentUser);
     }
   }
 });
