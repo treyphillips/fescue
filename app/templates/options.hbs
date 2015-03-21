@@ -5,11 +5,11 @@
 
 <div class="options-form">
 
-  {{input type="text" name="acreage" placeholder="How many acres do you have?" value=session.currentUser.acreage required=true}}
+  {{input type="text" name="acreage" placeholder="How many acres do you have?" value=model.acreage required=true}}
 
-  {{input type="text" name="shrub" placeholder="Do you have shrubs that need trimming?" value=session.currentUser.shrub required=true}}
+  {{input type="text" name="shrub" placeholder="Do you have shrubs that need trimming?" value=model.shrub required=true}}
 
-  {{input type="text" name="brush" placeholder="Do you have leaves or other brush that requires hauling off?" value=session.currentUser.brush required=true}}
+  {{input type="text" name="brush" placeholder="Do you have leaves or other brush that requires hauling off?" value=model.brush required=true}}
 
 <button>Submit</button>
 </div>

@@ -1,17 +1,23 @@
 import Ember from "ember";
 import Session from "simple-auth/session";
+import ajax from 'ic-ajax';
 
 export function initialize(container) {
   Session.reopen({
     setCurrentUser: function() {
-      var id = this.get("objectId");
+      var token = this.get('sessionToken');
 
-      if (!Ember.isEmpty(id)) {
-        return container.lookup("store:main").find("user", id).then(function(user) {
-         this.set("currentUser", user);
+      if (this.get('isAuthenticated') && !Ember.isEmpty(token)) {
+        var store = container.lookup('store:main');
+        ajax('https://api.parse.com/1/users/me').then(function(response) {
+          response.id = response.objectId;
+          delete response.objectId;
+          delete response.sessionToken;
+          var user = store.push('user', response);
+          this.set('currentUser', user);
         }.bind(this));
       }
-    }.observes("objectId")
+    }.observes('sessionToken')
   });
 }
 
