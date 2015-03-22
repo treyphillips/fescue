@@ -1,1 +1,32 @@
 {{outlet}}
+
+
+
+<div class="profile-info">
+
+  <div class="profile-headline">
+  <h2>Contact Info</h2>
+  </div>
+
+<ul>
+  <li>{{session.currentUser.firstName}}</li>
+  <li>{{session.currentUser.lastName}}</li>
+  <li>{{session.currentUser.phone}}</li>
+  <li>{{session.currentUser.address}}</li>
+  <li>{{session.currentUser.city}}</li>
+  <li>{{session.currentUser.state}}</li>
+  <li>{{session.currentUser.zipCode}}</li>
+</ul>
+
+<div class="profile-headline">
+<h2>Yard Info</h2>
+</div>
+<!-- {{#each request in model itemController="request"}} -->
+<ul>
+  <li>{{request.acreage}}</li>
+  <li>{{session.request.shrub}}</li>
+  <li>{{session.currentUser.brush}}</li>
+</ul>
+
+<!-- {{/each}} -->
+</div>

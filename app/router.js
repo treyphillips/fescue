@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('landing', { path: '/'});
   this.route('completed');
   this.route('profile');
+  this.route('profile-edit');
 });
 
 export default Router;

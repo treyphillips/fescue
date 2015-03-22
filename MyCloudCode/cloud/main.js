@@ -20,6 +20,7 @@ function sendTemplate(templateName, params) {
         content: params.lastName
       }
     ],
+    template_content: [],
     message: {
       from_email: "grassy.app@gmail.com",
       to: [{
@@ -41,15 +42,13 @@ function sendTemplate(templateName, params) {
   return promise;
 }
 
-Parse.Cloud.define('appointment', function(request, response) {
-  sendTemplate('customer-job-scheduled', {
-    subject: 'A contractor with Grass is on their way!',
-    firstName: "Trey",
-    lastName: "Phillips",
-    toEmail: "tlphillipsjr@gmail.com"
-  }).then(function(){
-    response.success();
-  }, function(error){
-    response.error(error);
-  });
+Parse.Cloud.afterSave('appointment', function(request, response) {
+  if(request.object.existed() === false) {
+    sendTemplate('customer-job-scheduled', {
+      subject: '',
+      firstName: request.object.get('firstName'),
+      lastName: request.object.get('lastName'),
+      toEmail: request.object.get('email')
+    });
+  }
 });

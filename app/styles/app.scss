@@ -1,39 +1,32 @@
-
 //////////Application.hbs Page//////////
-
-
 body {
-  background: url("/assets/images/jaspGrass.jpg") no-repeat center center fixed;
+  background: url("/assets/images/Green_Grass.JPG") no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-/*   filter:blur(20px);*/
+  /*   filter:blur(20px);*/
   text-shadow: 2px 2px black;
- }
-
+}
 .title {
   margin: 0 auto;
   width: 500px;
-/*   font-family: 'Libre Baskerville', serif;*/
+  /*   font-family: 'Libre Baskerville', serif;*/
   text-align: center;
   color: #fff;
   font-size: 100px;
 }
-
 .content {
   height: 430px;
   width: 800px;
   margin: 0 auto;
 }
-
 social-ul {
   margin: 0 auto;
   padding: 0;
   text-align: center;
   list-style-type: none;
 }
-
 .social-li {
   display: inline-block;
   margin: 0 auto;
@@ -42,56 +35,62 @@ social-ul {
   color: black;
   font-weight: bold;
 }
-
 .social-li img {
   width: 60px;
   height: auto;
 }
-
 .footer-container {
   margin: 0 auto;
   width: 1000px;
   text-align: center;
 }
-
 .social-icon img {
   width: 50px;
   height: auto;
 }
 
-.logged-in a{
+.logged-in {
+  display: inline-block;
+}
+.logged-in a {
   color: white;
 }
-//////////Registration Page//////////
 
+.prof-button {
+  color: white;
+  display: inline-block;
+}
+
+.prof-button a {
+  text-decoration: none;
+}
+//////////Registration Page//////////
 .reg-form {
   margin: 0 auto;
   width: 400px;
+  box-shadow: 3px 3px 3px #080808;
 }
-
 .reg-form input {
   width: 100%;
   height: 50px;
   text-align: center;
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+  padding-left: 10px;
 }
-
 .reg-button {
   margin: 0 auto;
   width: 400px;
 }
-
 .reg-button button {
   width: 100%;
 }
-
 .user-type {
   width: 400px;
   height: 40px;
   font-size: 25px;
 }
-
 //////////Landing Page//////////
-
 .landing-elevator {
   /*font-family: 'Libre Baskerville', serif;*/
   margin: 0 auto;
@@ -100,41 +99,85 @@ social-ul {
   color: white;
   font-size: 50px;
 }
-
-.land-buttons a{
+.land-buttons a {
   text-decoration: none;
   color: white;
   border: 2px;
   font-weight: 150;
+}
+.login-button {
+  display:inline-block;
+  border-radius: 5px;
+  font-size: 21px;
+  font-weight: lighter;
+  display:inline-block;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  text-shadow: none;
+  border: solid 1px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  background: black;
+  background: rgba(255, 255, 255, 0.6);
+  color:#000;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+  zoom: 1;
+}
+.register-button {
+  display:inline-block;
+  border-radius: 5px;
+  font-size: 21px;
+  font-weight: lighter;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  text-shadow: none;
+  border: solid 1px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  background: white;
+  background: rgba(255, 255, 255, 0.6);
+  color:#000;
 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+  zoom: 1;
 }
 
-
+.login-button:hover,
+.register-button:hover {
+  background:rgba(255,255,255,.8)
+}
 //////////Login Page//////////
-
 .login-form {
   width: 200px;
   margin: 0 auto;
+  box-shadow: 2px 2px 2px #080808;
 }
-
-.login-form button, input {
+.login-form button,
+input {
   width: 200px;
   height: 50px;
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+  padding-left: 10px;
 }
 
-
 //////////Options Page//////////
-
 .options-form {
   width: 600px;
   margin: 0 auto;
-}
+  box-shadow: 2px 2px 2px #080808;
 
-.options-form input, button {
+}
+.options-form input,
+button {
   width: 600px;
   height: 50px;
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+  padding-left: 10px;
 }
-
 //////////Completed Page//////////
 .completed {
   margin: 0 auto;
@@ -142,4 +185,22 @@ social-ul {
   text-align: center;
   color: white;
   font-size: 50px;
+}
+//////////Profile Page//////////
+.profile-info {
+  background-color: white;
+  font-size: 30px;
+  text-shadow: none;
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px #080808;
+  padding-left: 0;
+}
+.profile-info li {
+  list-style-type: none;
+}
+.profile-headline {
+  text-align: center;
+  text-shadow: none;
+  margin: 0 auto;
 }

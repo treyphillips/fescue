@@ -1,11 +1,11 @@
 <div class="logged-in">
 {{#if session.isAuthenticated}}
-  <a {{ action 'invalidateSession' }}>Logout</a>
+  <a {{ action 'invalidateSession' }}>Logout |</a>
 {{else}}
-  <a {{ action 'authenticateSession' }}>Login</a>
+  <a {{ action 'authenticateSession' }}>Login |</a>
 {{/if}}
 </div>
-
+{{#link-to 'profile'}}<div class="prof-button">Profile</div>{{/link-to}}
 <div class="header">
   <h1 class="title">Grass</h1>
 </div>
@@ -13,28 +13,3 @@
 
 
 {{outlet}}
-
-
-<!-- <div class="footer">
-
-  <div class="footer-container">
-    <ul class="social-ul">
-
-      <li class="social-li">
-        <img class="social-icon" src="assets/images/email-icon.png" alt="envelope">
-        <p>tlphillipsjr@gmail.com</p>
-      </li>
-
-      <li class="social-li">
-        <img src="assets/images/twitter21.svg" alt="twitter">
-        <p>@treyphillips</p>
-      </li>
-
-      <li class="social-li">
-        <img src="/assets/images/github13.svg" alt='github'>
-        <p>864.590.5766</p>
-      </li>
-
-    </ul>
-  </div>
-</div> -->
