@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
       this.get('model').save().then(function(){
         console.log('success');
       });
+      this.transitionToRoute('completed');
     }
   }
 });
