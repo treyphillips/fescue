@@ -9,7 +9,12 @@ export default Ember.Controller.extend({
       this.get('model').save().then(function(){
         console.log('success');
       });
-      this.transitionToRoute('completed');
+
+      this.transitionToRoute('loading');
+      Ember.run.later(this, function(){
+        this.transitionToRoute('completed');
+      }, 3000);
+
     }
   }
 });

@@ -2,7 +2,10 @@ import Ember from "ember";
 import Session from "simple-auth/session";
 import ajax from 'ic-ajax';
 
-export function initialize(container) {
+export function initialize(container, application) {
+
+  application.inject('adapter', 'session', 'simple-auth-session:main');
+
   Session.reopen({
     setCurrentUser: function() {
       var token = this.get('sessionToken');

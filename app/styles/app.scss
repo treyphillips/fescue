@@ -70,13 +70,22 @@ social-ul {
   text-decoration: none;
 }
 
-
+/* .footer {
+  background-color: #07252F;
+  width: 500px;
+  margin: 0 auto;
+  position: fixed;
+  height: 80px;
+  bottom: 0;
+  text-align: center;
+} */
 
 ////////////////Registration Page////////////////
 .reg-form {
   margin: 0 auto;
   box-shadow: 3px 3px 3px #080808;
   width: 400px;
+  margin-top: 18px;
 }
 
 .reg-form input {
@@ -171,6 +180,7 @@ social-ul {
 ////////////////Login Page////////////////
 .login-form {
   margin: 0 auto;
+  margin-top: 30px;
   box-shadow: 2px 2px 2px #080808;
   width: 200px;
 }
@@ -253,4 +263,34 @@ button {
   width: 500px;
   text-align: right;
   font-size: 22px;
+}
+
+
+
+////////////////Profile Page////////////////
+.loading-words {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 40px;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.loader{
+  margin: 0 0 2em;
+  height: 500px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+/*   display: inline-block;
+ */  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: #65914A;
 }

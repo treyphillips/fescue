@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('completed');
   this.route('profile');
   this.route('profile-edit');
+  this.route('loading');
 });
 
 export default Router;

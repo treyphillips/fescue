@@ -42,7 +42,8 @@ function sendTemplate(templateName, params) {
   return promise;
 }
 
-Parse.Cloud.afterSave('appointment', function(request, response) {
+Parse.Cloud.afterSave('Request', function(request) {
+  console.log('hi');
   if(request.object.existed() === false) {
     sendTemplate('customer-job-scheduled', {
       subject: '',

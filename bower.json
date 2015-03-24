@@ -14,6 +14,8 @@
     "bootstrap-material-design": "FezVrasta/bootstrap-material-design#2708438daa55015155769489f2df8dea06fc0206",
     "jquery": "2.1.3",
     "fontawesome": "~4.3.0",
-    "ember-simple-auth": "0.7.3"
+    "ember-simple-auth": "0.7.3",
+    "bourbon": "~4.2.1",
+    "neat": "~1.7.2"
   }
 }
