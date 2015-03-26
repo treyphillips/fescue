@@ -1,0 +1,32 @@
+{{outlet}}
+
+
+{{#link-to 'profile-edit'}}<div class="prof-edit-button">Edit</div>{{/link-to}}
+<div class="profile-info">
+
+  <div class="contractor-headline">
+  <h2>Open Requests:</h2>
+  </div>
+<div class="contractor-requests">
+  <ul>
+
+      {{#each request in model}}
+        <div class="single-request">
+          <li class="contractor-names"><div class="single-request-title"> Name:</div>{{request.createdBy.firstName}} {{request.createdBy.lastName}}</li>
+          <li><div class="single-request-title">Land Size:</div>{{request.acreage}} acres</li>
+          <li><div class="single-request-title">Shrubs need trimming:</div> {{request.shrub}}</li>
+          <li><div class="single-request-title">Brush:</div> {{request.brush}}</li>
+        </div>
+      {{/each}}
+  </ul>
+</div>
+<!-- <div class="profile-headline">
+<h2>Yard Info:</h2>
+</div>
+{{#each request in model}}
+<ul>
+
+</ul>
+
+{{/each}} -->
+</div>

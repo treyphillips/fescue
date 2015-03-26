@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('profile');
   this.route('profile-edit');
   this.route('loading');
+  this.route('contractor');
 });
 
 export default Router;

@@ -26,20 +26,30 @@ export default Ember.Object.extend({
     }
   },
 
-  findAll: function(name) {
+  findQuery: function(name, query) {
   /* jshint unused: false */
-  var userId = this.get('session.currentUser.id');
   return ajax("https://api.parse.com/1/classes/Request?include=createdBy", {
     data: {
       where: JSON.stringify({
         createdBy: {
           "__type":"Pointer",
           "className":"_User",
-          "objectId": userId
+          "objectId": query.user.id
         }
       })
     }
   }).then(function(response){
+    return response.results.map(function(request) {
+      request.id = request.objectId;
+      delete request.objectId;
+      return request;
+    });
+  });
+  },
+
+  findAll: function(name) {
+  /* jshint unused: false */
+  return ajax("https://api.parse.com/1/classes/Request?include=createdBy").then(function(response){
     return response.results.map(function(request) {
       request.id = request.objectId;
       delete request.objectId;

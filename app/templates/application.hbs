@@ -1,8 +1,8 @@
 <div class="logged-in">
 {{#if session.isAuthenticated}}
-  <a {{ action 'invalidateSession' }}>Logout |</a>
+  <a {{ action 'invalidateSession' }}>Logout  |</a>
 {{else}}
-  <a {{ action 'authenticateSession' }}>Login |</a>
+  <a {{ action 'authenticateSession' }}>Login  |</a>
 {{/if}}
 </div>
 {{#link-to 'profile'}}<div class="prof-button">Profile</div>{{/link-to}}
@@ -10,13 +10,22 @@
   <h1 class="title">Fescue</h1>
 </div>
 
-<div class="big-white-box">
 
-</div>
+<!--
+<div class="footer">
+  <ul>
+  <li><span>{{fa-icon "envelope-o"}}</span><p>tlphillipsjr@gmail.com</p></li>
+  <li><span>{{fa-icon "phone"}}</span><p>864.590.5766</p></li>
+  <li><span>{{fa-icon "twitter"}}</span><p>@treyphillips</p></li>
+  <li><span>{{fa-icon "github"}}</span><p>treyphillips</p></li>
+</ul>
+</div> -->
 
-
-<div class="footer"></div>
-
+<!-- <div class="foot-words">
+  <p>tlphillipsjr@gmail.com</p>
+  <p>864.590.5766</p>
+  <p>@treyphillips</p>
+</div> -->
 
 
 {{outlet}}

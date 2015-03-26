@@ -3,6 +3,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model: function(){
-    return this.store.findAll('request');
+    return this.store.findQuery('request', {
+      user: this.get('session.currentUser')
+    });
   }
 });

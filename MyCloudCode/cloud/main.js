@@ -6,7 +6,7 @@ function sendTemplate(templateName, params) {
   Mandrill.initialize('Mx2WvDNwdDYIcYarJIxtPg');
   Mandrill.sendTemplate({
     template_name: templateName,
-    template_content: [
+    global_merge_vars: [
       {
         name: "SUBJECT",
         content: params.subject
@@ -43,13 +43,14 @@ function sendTemplate(templateName, params) {
 }
 
 Parse.Cloud.afterSave('Request', function(request) {
-  console.log('hi');
   if(request.object.existed() === false) {
-    sendTemplate('customer-job-scheduled', {
-      subject: '',
-      firstName: request.object.get('firstName'),
-      lastName: request.object.get('lastName'),
-      toEmail: request.object.get('email')
+    request.object.get('createdBy').fetch().then(function(user){
+      sendTemplate('customer-job-scheduled', {
+        subject: 'Fescue to the Rescue',
+        firstName: user.get('firstName'),
+        lastName: user.get('lastName'),
+        toEmail: user.get('email')
+      });
     });
   }
 });
