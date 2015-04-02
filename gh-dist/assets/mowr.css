@@ -1,5 +1,5 @@
 body {
-  background: url('/assets/images/blade-of-grass-landscape-lens-flare-479.jpg') no-repeat center center fixed;
+  background: url("/assets/images/blade-of-grass-landscape-lens-flare-479.jpg") no-repeat center center fixed;
   background-size: cover;
   text-shadow: 2px 2px black;
   font-family: 'Open Sans', sans-serif; }
@@ -161,7 +161,8 @@ social-ul {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
   zoom: 1; }
 
-.login-button:hover, .register-button:hover {
+.login-button:hover,
+.register-button:hover {
   background: rgba(255, 255, 255, 0.8); }
 
 .login-form {
@@ -170,7 +171,8 @@ social-ul {
   box-shadow: 2px 2px 2px #080808;
   width: 200px; }
 
-.login-form button, input {
+.login-form button,
+input {
   border: 0;
   border-bottom: 1px solid #dfdfdf;
   padding-left: 10px;
@@ -183,7 +185,8 @@ social-ul {
   box-shadow: 2px 2px 2px #080808;
   width: 600px; }
 
-.options-form input, button {
+.options-form input,
+button {
   border: 0;
   border-bottom: 1px solid #dfdfdf;
   padding-left: 10px;
@@ -257,7 +260,8 @@ social-ul {
 /*
   Set the color of the icon
 */
-svg path, svg rect {
+svg path,
+svg rect {
   fill: #65914A; }
 
 .contractor-headline {
