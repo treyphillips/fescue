@@ -245,7 +245,6 @@ button {
 }
 
 
-
 ////////////////Completed Page////////////////
 .completed {
   margin: 0 auto;
@@ -266,9 +265,12 @@ button {
   box-shadow: 3px 3px 3px #080808;
   background-color: white;
   padding-left: 0;
+  padding-bottom: 10px;
   width: 500px;
   text-shadow: none;
-  font-size: 30px;
+/*   font-size: 30px;
+ */
+ font-size: 16px;
 }
 
 .profile-info li {
@@ -308,7 +310,7 @@ button {
 }
 
 .loader{
-  margin: 0 0 2em;
+  margin: 0 auto;
   padding: 1em;
   width: 20%;
   height: 500px;

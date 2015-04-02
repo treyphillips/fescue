@@ -1,6 +1,7 @@
 {{outlet}}
 
 
+
 {{#link-to 'profile-edit'}}<div class="prof-edit-button">Edit</div>{{/link-to}}
 <div class="profile-info">
 
@@ -12,7 +13,7 @@
 
       {{#each request in model}}
         <div class="single-request">
-          <li class="contractor-names"><div class="single-request-title"> Name:</div>{{request.createdBy.firstName}} {{request.createdBy.lastName}}</li>
+          <li class="contractor-names"><div class="single-request-title"> Name:</div>{{request.createdBy.firstName}}  {{request.createdBy.lastName}}</li>
           <li><div class="single-request-title">Land Size:</div>{{request.acreage}} acres</li>
           <li><div class="single-request-title">Shrubs need trimming:</div> {{request.shrub}}</li>
           <li><div class="single-request-title">Brush:</div> {{request.brush}}</li>
