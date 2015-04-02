@@ -3118,7 +3118,7 @@ catch(err) {
 if (runningTests) {
   require("mowr/tests/test-helper");
 } else {
-  require("mowr/app")["default"].create({"name":"mowr","version":"0.0.0.6bcbef6b"});
+  require("mowr/app")["default"].create({"name":"mowr","version":"0.0.0.32d8fc80"});
 }
 
 /* jshint ignore:end */
